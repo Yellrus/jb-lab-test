@@ -1,0 +1,27 @@
+include ../contacts/contacts
+include ../latest-posts/latest-posts
+include ../latest-tweets/latest-tweets
+
+mixin footer()
+	footer.page-footer
+	
+		section.page-footer__section-sub-nav
+			.page-footer__wrapper.container
+				+contacts()
+				+latest-posts()
+				+latest-tweets()
+			
+		section.page-footer__section-copy
+			.page-footer__wrapper-copy.container
+				.page-footer__copyright
+					| © Copyright 2014 
+					a.page-footer__copy-link(href='#') FreebiesXpress.com
+				.page-footer__social
+					a.page-footer__item.page-footer__item--twitter(href='#')
+						span.sprite-twitter.page-footer__icon
+					a.page-footer__item.page-footer__item--facebook(href='#')
+						span.sprite-facebook.page-footer__icon
+					a.page-footer__item.page-footer__item--pinterest(href='#')
+						span.sprite-pinterest.page-footer__icon
+					a.page-footer__item.page-footer__item--google(href='#')
+						span.sprite-google.page-footer__icon

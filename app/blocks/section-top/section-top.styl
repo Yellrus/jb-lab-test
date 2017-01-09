@@ -1,0 +1,39 @@
+.section-top
+	background #261f17 url('../images/section-top__bg.jpg') center no-repeat
+	background-size cover
+	box-shadow inset 0 0 0 2000px rgba(black,0.75)
+	color $white-color
+	padding-top 105px
+	padding-bottom 120px
+
+	&__wrapper
+		flex-center()
+		flex-direction column
+
+	&__title
+		font-size 60px
+		line-height 1.2
+		font-weight 700
+		text-align center
+		text-transform uppercase
+		letter-spacing -0.038em
+		margin-bottom 19px
+		+at(2)
+			font-size 30px
+		+at(3)
+			font-size 60px
+
+	&__subtitle
+		sub-title()
+		margin-bottom 52px
+		&--color
+			color $gray-color
+		+at(2)
+			font-size 14px
+		+at(3)
+			font-size 20px
+
+	&__btn-view
+		&:hover,&:focus
+			background-color $white-color
+			color $black-light	

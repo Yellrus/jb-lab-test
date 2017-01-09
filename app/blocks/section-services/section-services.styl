@@ -1,0 +1,71 @@
+.section-services
+	padding-bottom 81px
+
+	&__heading
+		center()
+		text-align center
+		margin-bottom 85px
+		+at(2)
+			text-align center
+			margin-bottom 40px
+		+at(3)
+			margin-bottom 45px
+
+	&__title
+		section-title()
+		margin-bottom 8px
+		+at(2)
+			font-size 28px
+		+at(3)
+			font-size 40px
+
+	&__sub-title
+		sub-title()
+		+at(2)
+			font-size 17px
+		+at(3)
+			font-size 20px
+
+	&__wrapper-items
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+
+	&__inner-item
+		width 284px
+		padding-top 82px
+		padding-bottom 25px
+		text-align center
+		+at(2)
+			margin-bottom 35px
+		+at(3)
+			flex 1 1 274px
+			margin-bottom 25px
+
+		&--icon
+			background-position top center
+			background-repeat no-repeat
+		&--icon-heart
+			background-image svg('icon--heart')
+			background-size 52px 47px
+		&--icon-phone
+			background-image svg('icon--phone')
+			background-size 39px 50px
+		&--icon-graph
+			background-image svg('icon--graph')
+			background-size 54px 42px
+
+	&__title-item
+		font-size 18px
+		font-weight 700
+		text-transform uppercase
+		letter-spacing -0.025em
+		padding-left 4px
+		margin-bottom 10px
+
+	&__text-item
+		font-size 14px
+		text-align center
+		font-family $sub-font
+		color $text-color
+		letter-spacing -0.025em

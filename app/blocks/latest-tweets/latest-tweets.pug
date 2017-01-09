@@ -1,0 +1,25 @@
+mixin latest-tweets()
+	.latest-tweets
+		.latest-tweets__title Latest tweets
+		.latest-tweets__info
+			.latest-tweets__item
+				+svg-icon("latest-tweets__icon  latest-tweets__icon--twitter","#icon-twitter")
+				div.latest-tweets__inner
+					a.latest-tweets__value(href='#') Confucius: Life is really simple, but we insist on making it complicated. 
+					div.latest-tweets__hashtags
+						a.latest-tweets__hashtag(href='#')
+							s #
+							b famousquotes
+					div.latest-tweets__time 8 mins ago
+			.latest-tweets__item
+				+svg-icon("latest-tweets__icon  latest-tweets__icon--twitter","#icon-twitter")
+				div.latest-tweets__inner
+					a.latest-tweets__value(href='#') Grab the Free Treehouse web template at FreebiesXpress! 
+					div.latest-tweets__hashtags
+						a.latest-tweets__hashtag(href='#')
+							s #
+							b freebies
+						a.latest-tweets__hashtag(href='#')
+							s #
+							b templates
+					div.latest-tweets__time 2 days ago	

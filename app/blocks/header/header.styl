@@ -1,0 +1,157 @@
+.page-header
+	center()
+	display flex
+	position relative
+	justify-content space-between
+	align-items center
+	width 940px
+	padding 30px 0 25px 0
+	+at(2)
+		center()
+		position relative
+		display flex
+		flex-wrap wrap
+		width 260px
+	+at(3)
+		center()
+		width 668px
+		flex-wrap nowrap
+
+
+	&--close
+		.page-header__hamburger
+			position absolute
+			width 21px
+			height 21px
+			outline none
+			border none
+			background-color transparent
+			background-image svg('icon-menu-open')
+			background-position center
+			background-repeat no-repeat
+			font-size 0
+			cursor pointer
+			transition 0.2s
+			+at(3)
+				display none
+
+	&--opened
+		.page-header__hamburger
+			position absolute
+			width 21px
+			height 20px
+			outline none
+			border none
+			background-color transparent
+			background-image svg('icon-menu-close')
+			background-position center
+			background-repeat no-repeat
+			font-size 0
+			cursor pointer
+			transition 0.2s
+			+at(3)
+				display none
+
+	&__logo
+		display flex
+		align-items center
+		&:hover, &:focus
+			opacity 0.6
+		&:active
+			opacity 0.3
+
+	&__logo-icon
+		display flex
+		justify-content center
+		align-items center
+		width 28px
+		height 29px
+		border-radius 50%
+		background-color $brand-color
+		position relative
+		flex-shrink 0
+
+	&__logo-title
+		font-size 18px
+		line-height 2.28
+		color $logo-color
+		text-transform uppercase
+		margin-left 5px
+
+	&__nav
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		width 45.5%
+		padding 10px 0
+		+at(2)
+			display none
+		+at(3)
+			display flex
+			flex-shrink 0
+			flex-wrap nowrap
+			width 480px
+		+at(4)
+			display flex
+
+	&__nav-item
+		font-family $main-font
+		font-weight 400
+		font-size 14px
+		line-height 2.93
+		text-transform uppercase
+		color $text-color
+
+		&:hover, &:focus
+			color $black-light
+
+		&:active
+			color rgba($black-light,0.3)
+
+		+at(2)
+			center()
+			display flex
+			flex-wrap wrap
+			justify-content center
+			width 80%
+
+	&__hamburger
+		position absolute
+		top 24px
+		right 16px
+		padding 25px
+		width 21px
+		height 21px
+		outline none
+		border none
+		background-color transparent
+		background-image svg('icon-menu-open')
+		background-position center
+		background-repeat no-repeat
+		font-size 0
+		cursor pointer
+		+at(3)
+			display none
+		+at(4)
+			display none
+
+
+
+@media (min-width 320px) and (max-width 767px)
+	.page-header__mobile-menu
+		display none
+
+	.page-header--no-js .page-header__mobile-menu
+		display block
+		margin 0 auto
+
+	.page-header--opened .page-header__mobile-menu
+		center()
+		display flex
+		flex-wrap wrap
+
+		&--close
+			display block
+
+	.page-header--no-js .page-header__hamburger
+		display none

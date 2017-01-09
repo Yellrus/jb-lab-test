@@ -1,0 +1,42 @@
+include ../../node_modules/bemto.pug/bemto
+- set_bemto_settings({ modifier: '--' })
+
+include ../jade-tools/scripts
+
+include ../blocks/header/header
+include ../blocks/section-top/section-top
+include ../blocks/section-services/section-services
+include ../blocks/section-feautures/section-feautures
+include ../blocks/section-project/section-project
+include ../blocks/section-values/section-values
+include ../blocks/section-reviews/section-reviews
+include ../blocks/section-contact/section-contact
+include ../blocks/section-logos/section-logos
+include ../blocks/footer/footer
+
+
+doctype html
+html(lang='en')
+	include ../blocks/head/head
+	body.index-content
+
+		+header()
+
+		block content
+		+section-top()
+		+section-services()
+		+section-feautures()
+		+section-project()
+		+section-values()
+		+section-reviews()
+		+section-contact()
+		+section-logos()
+
+		+footer()
+
+		div(style='display: none')
+			include ../sprites/icons.svg
+
+		block scripts
+		+scripts(['build.js'])
+

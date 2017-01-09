@@ -1,0 +1,46 @@
+@import 'helpers/sprites'
+@import 'helpers/variables'
+@import 'helpers/mixins'
+
+rupture.scale = 0 320px 768px 1200px
+
+
+@import 'base/reset'
+@import 'base/core'
+@import 'base/fonts'
+@import 'base/container'
+
+@import 'elements/_btn'
+@import 'elements/_index-content'
+
+@import '../blocks/svg-icon/*'
+@import '../blocks/header/*'
+@import '../blocks/section-top/*'
+@import '../blocks/section-services/*'
+@import '../blocks/section-feautures/*'
+@import '../blocks/section-project/*'
+@import '../blocks/section-values/*'
+@import '../blocks/section-reviews/*'
+@import '../blocks/section-contact/*'
+@import '../blocks/section-logos/*'
+@import '../blocks/contacts/*'
+@import '../blocks/latest-posts/*'
+@import '../blocks/latest-tweets/*'
+@import '../blocks/footer/*'
+
+/*
+В 'helpers/sprites' были только миксины, которые нигде не вызывались,
+поэтому и в итоговом файле стилей их не было.
+Строка ниже выполняет миксин и пишет в файл стилей все стили для спрайтов
+Применить миксин можно в любом месте
+*/
+sprites($spritesheet_sprites);
+
+
+/*
+span[class^="sprite-"] — указывает, что все спрайты должны быть инлайновыми блоками.
+Если применить класс к span без этой поправки, ничего не сработает,
+потому что ссылки строчные и параметры высоты и ширины не применятся.
+*/
+span[class^="sprite-"]
+	display inline-block

@@ -1,0 +1,79 @@
+.page-footer
+
+	&__section-sub-nav
+		background-color $footer-bg-color
+		padding-top 43px
+		padding-bottom 43px
+
+	&__wrapper
+		display flex
+		justify-content space-between
+		+at(2)
+			flex-wrap wrap
+		+at(3)
+			flex-wrap nowrap
+
+	&__wrapper-copy
+		display flex
+		align-items center
+		+at(2)
+			flex-wrap wrap
+
+	&__section-copy
+		padding-top 29px
+		padding-bottom 32px
+		background-color $white-color
+
+	&__copyright
+	&__copy-link
+		font-size 14px
+		line-height 1.57
+		color $logo-color
+		letter-spacing -0.025em
+
+	&__social
+		display flex
+		margin-left 120px
+		margin-right auto
+		+at(2)
+			margin-left auto
+			order -1
+			margin-bottom 30px
+		+at(3)
+			order 0
+			margin-bottom 0
+
+	&__item
+		display flex
+		justify-content center
+		align-items center
+		width 40px
+		height 40px
+		background-color $footer-bg-color
+		border-radius 50%
+		flex-shrink 0
+		margin-right 10px
+
+		&--twitter
+			&:hover, &:focus
+				background-color #00aced
+			&:active
+				background-color lighten(#00aced, 20%)
+
+		&--facebook
+			&:hover, &:focus
+				background-color #3b5998
+			&:active
+				background-color lighten(#3b5998, 20%)
+
+		&--pinterest
+			&:hover, &:focus
+				background-color #cb2028
+			&:active
+				background-color lighten(#cb2028, 20%)
+
+		&--google
+			&:hover, &:focus
+				background-color #da2713
+			&:active
+				background-color lighten(#da2713, 20%)

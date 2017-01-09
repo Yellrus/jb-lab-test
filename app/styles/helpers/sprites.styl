@@ -1,0 +1,122 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$sprite-facebook_name = 'sprite-facebook';
+$sprite-facebook_x = 75px;
+$sprite-facebook_y = 0px;
+$sprite-facebook_offset_x = -75px;
+$sprite-facebook_offset_y = 0px;
+$sprite-facebook_width = 10px;
+$sprite-facebook_height = 18px;
+$sprite-facebook_total_width = 85px;
+$sprite-facebook_total_height = 44px;
+$sprite-facebook_image = '../images/sprites.png';
+$sprite-facebook = 75px 0px -75px 0px 10px 18px 85px 44px '../images/sprites.png' 'sprite-facebook';
+$sprite-google_name = 'sprite-google';
+$sprite-google_x = 24px;
+$sprite-google_y = 0px;
+$sprite-google_offset_x = -24px;
+$sprite-google_offset_y = 0px;
+$sprite-google_width = 17px;
+$sprite-google_height = 17px;
+$sprite-google_total_width = 85px;
+$sprite-google_total_height = 44px;
+$sprite-google_image = '../images/sprites.png';
+$sprite-google = 24px 0px -24px 0px 17px 17px 85px 44px '../images/sprites.png' 'sprite-google';
+$sprite-leaf_name = 'sprite-leaf';
+$sprite-leaf_x = 0px;
+$sprite-leaf_y = 28px;
+$sprite-leaf_offset_x = 0px;
+$sprite-leaf_offset_y = -28px;
+$sprite-leaf_width = 14px;
+$sprite-leaf_height = 16px;
+$sprite-leaf_total_width = 85px;
+$sprite-leaf_total_height = 44px;
+$sprite-leaf_image = '../images/sprites.png';
+$sprite-leaf = 0px 28px 0px -28px 14px 16px 85px 44px '../images/sprites.png' 'sprite-leaf';
+$sprite-pinterest_name = 'sprite-pinterest';
+$sprite-pinterest_x = 0px;
+$sprite-pinterest_y = 0px;
+$sprite-pinterest_offset_x = 0px;
+$sprite-pinterest_offset_y = 0px;
+$sprite-pinterest_width = 16px;
+$sprite-pinterest_height = 20px;
+$sprite-pinterest_total_width = 85px;
+$sprite-pinterest_total_height = 44px;
+$sprite-pinterest_image = '../images/sprites.png';
+$sprite-pinterest = 0px 0px 0px 0px 16px 20px 85px 44px '../images/sprites.png' 'sprite-pinterest';
+$sprite-twitter_name = 'sprite-twitter';
+$sprite-twitter_x = 49px;
+$sprite-twitter_y = 0px;
+$sprite-twitter_offset_x = -49px;
+$sprite-twitter_offset_y = 0px;
+$sprite-twitter_width = 18px;
+$sprite-twitter_height = 16px;
+$sprite-twitter_total_width = 85px;
+$sprite-twitter_total_height = 44px;
+$sprite-twitter_image = '../images/sprites.png';
+$sprite-twitter = 49px 0px -49px 0px 18px 16px 85px 44px '../images/sprites.png' 'sprite-twitter';
+$spritesheet_width = 85px;
+$spritesheet_height = 44px;
+$spritesheet_image = '../images/sprites.png';
+$spritesheet_sprites = $sprite-facebook $sprite-google $sprite-leaf $sprite-pinterest $sprite-twitter;
+$spritesheet = 85px 44px '../images/sprites.png' $spritesheet_sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}

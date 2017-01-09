@@ -1,0 +1,57 @@
+.contacts
+	width 277px
+	+at(3)
+		width 250px
+
+	&__info
+		display flex
+		flex-direction column
+		justify-content center
+
+	&__title
+		font-family $main-font
+		font-size 18px
+		line-height 2.78
+		font-weight 700
+		letter-spacing -0.025em
+		text-transform uppercase
+		color $white-color
+		margin-bottom 10px
+
+	&__item
+		display flex
+		align-items center
+		margin-bottom 10px
+
+		&--align
+			align-items flex-start
+
+		&--margin
+			margin-bottom 15px
+
+	&__icon
+		flex-shrink 0
+		fill-rule evenodd
+		fill $footer-svg
+
+		&--location
+			width 22px
+			height 29px
+			margin-right 16px
+
+		&--iphone
+			width 19px
+			height 30px
+			margin-right 18px
+			margin-left 2px
+
+		&--email
+			width 23px
+			height 16px
+			margin-right 14px
+
+	&__value
+		font-family $sub-font
+		font-style normal
+		line-height 1.5
+		color $gray-whisper

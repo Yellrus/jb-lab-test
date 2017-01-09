@@ -1,0 +1,6 @@
+mixin svg-icon(classes, xlink, viewBox)
+	- var classes = classes ? "svg-icon " + classes : "svg-icon"
+	- var viewBox = viewBox || "0 0 32px 32px"
+	
+	svg(class= classes viewBox= viewBox)
+		use(xlink:href= xlink)

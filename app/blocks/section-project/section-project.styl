@@ -1,0 +1,151 @@
+.section-project
+	center()
+	max-width 1400px
+	background-image url('../images/isometric-ipad-air.png')
+	background-position right 140px
+	background-repeat no-repeat
+	padding-bottom 40px
+	+at(2)
+		center()
+		background-image none
+		max-width 100%
+		width 260px
+	+at(3)
+		width 100%
+		background-image url('../images/isometric-ipad-air.png')
+		background-position right 235px
+		background-size 50%
+
+	&__heading
+		center()
+		text-align center
+		margin-bottom 80px
+		+at(2)
+			text-align center
+			margin-bottom 40px
+		+at(3)
+			margin-bottom 45px
+
+	&__title
+		section-title()
+		margin-bottom 8px
+		+at(2)
+			font-size 28px
+		+at(3)
+			font-size 40px
+
+	&__sub-title
+		sub-title()
+		+at(2)
+			font-size 17px
+		+at(3)
+			font-size 20px
+
+	&__developing
+		width 480px
+		margin-left 230px
+		+at(2)
+			center()
+			max-width 100%
+			width 260px
+		+at(3)
+			width 668px
+			center()
+
+	&__head
+		font-size 18px
+		color $black-light
+		text-transform uppercase
+		letter-spacing -0.030em
+		margin-bottom 14px
+
+	&__text
+		max-width 413px
+		font-size 16px
+		font-family $sub-font
+		color $text-color
+		letter-spacing -0.025em
+		margin-bottom 38px
+
+	&__list-items
+		padding-left 90px
+		position relative
+		margin-bottom 26px
+
+	&__item
+		display flex
+		align-items flex-start
+		flex-wrap wrap
+		&:not(:last-child)
+			margin-bottom 40px
+		+at(3)
+			flex-direction column
+
+		&--icon
+			&::before
+				display block
+				position absolute
+				left 0
+				content ''
+				border 3px solid black
+				border-radius 50%
+				width 73px
+				height 72px
+				margin-top -13px
+				background-repeat no-repeat
+				background-position	center
+				+at(2)
+					margin-top -5px
+				+at(3)
+					margin-top -13px
+
+		&--icon-basket
+			&::before
+				background-image svg('icon-basket')
+
+		&--icon-laptop
+			&::before
+				background-image svg('icon-laptop')
+
+		&--icon-locked
+			&::before
+				background-image svg('icon-locked')
+
+	&__item-title
+		font-size 18px
+		line-height 1.4
+		color $black-light
+		letter-spacing -0.030em
+
+	&__item-sub-title
+		text()
+
+	&__desc
+		text()
+		margin-bottom 20px
+		line-height 1.5
+		+at(3)
+			width 70%
+
+	&__btn
+		display flex
+		align-items center
+		max-width 180px
+		position relative
+		text-transform uppercase
+		color $brand-color
+		cursor pointer
+		&:hover, &:focus
+			color black
+			svg
+				fill black
+		&:active
+			color rgba(black, .6)
+			svg
+				fill-opacity .6
+
+	&__icon-arrow
+		width 15px
+		height 12px
+		fill $brand-color
+		margin-left 5px

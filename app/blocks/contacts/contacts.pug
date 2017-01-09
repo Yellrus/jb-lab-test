@@ -1,0 +1,13 @@
+mixin contacts()
+	.contacts
+		.contacts__title Contact us
+		address.contacts__info
+			.contacts__item.contacts__item--align
+				+svg-icon("contacts__icon  contacts__icon--location","#icon-location")
+				div.contacts__value 55 Main St.<br> Toronto, ON<br> M1H 3A5
+			.contacts__item.contacts__item--margin
+				+svg-icon("contacts__icon  contacts__icon--iphone","#icon-iphone")
+				a.contacts__value(href='tel:+4165555252')  (416) 555-5252
+			.contacts__item
+				+svg-icon("contacts__icon  contacts__icon--email","#icon-email")
+				a.contacts__value(href='mailto:hello@treehouse.com') hello@treehouse.com
